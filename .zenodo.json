@@ -1,7 +1,7 @@
 {
   "title": "Code for: Why learned pool-boiling forecasters do not nucleate, and a loss term that makes them",
   "upload_type": "software",
-  "description": "Evaluation protocol, premise audit, training-loss wrappers (including the wall-band phase-indicator term) and per-run measurements for the paper. Trained checkpoints are deposited separately: doi:10.5281/zenodo.23299635.",
+  "description": "Evaluation protocol, premise audit, training-loss wrappers (including the wall-band phase-indicator term) and per-run measurements for the paper. Trained checkpoints are deposited separately: doi:10.57967/hf/10857.",
   "creators": [
     {
       "name": "Do, Hai",
@@ -25,7 +25,7 @@
       "scheme": "doi"
     },
     {
-      "identifier": "10.5281/zenodo.23299635",
+      "identifier": "10.57967/hf/10857",
       "relation": "isSupplementedBy",
       "scheme": "doi"
     }

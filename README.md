@@ -67,14 +67,14 @@ See [REPRODUCE.md](REPRODUCE.md), which covers:
 ## Licence
 
 - Code: MIT (see `LICENSE`).
-- Trained checkpoints (on Zenodo, doi:10.5281/zenodo.23299635): CC BY-NC-SA 4.0, matching the licence of the training data.
+- Trained checkpoints (on Hugging Face, doi:10.57967/hf/10857): CC BY-NC-SA 4.0, matching the licence of the training data.
 - Upstream Bubbleformer: MIT. It is not included here and is fetched by `setup/get_bubbleformer.sh`.
 - BubbleML data: CC BY-NC-SA 4.0. The repository includes derived measurements only, plus two frames
   used in Fig. 5a (`results/diagnostics/fig5a_frames.npz`).
 
 ## Trained models
 
-The 24 trained models are on Zenodo under CC BY-NC-SA 4.0: [doi:10.5281/zenodo.23299635](https://doi.org/10.5281/zenodo.23299635). They contain weights and training configuration
+The 24 trained models are on Hugging Face under CC BY-NC-SA 4.0: [doi:10.57967/hf/10857](https://doi.org/10.57967/hf/10857) (https://huggingface.co/neo-decade10/pool-boiling-nucleation-models). They contain weights and training configuration
 only (`scripts/export_checkpoints.py`), and `manifest.csv` lists each file with its SHA-256. Place
 them under `$WORK_ROOT/checkpoints/` and evaluate any of them with
 `bin/evaluate_run.sh <run> $WORK_ROOT/checkpoints/run<run>.ckpt`.
