@@ -1,12 +1,33 @@
 {
   "title": "Code for: Why learned pool-boiling forecasters do not nucleate, and a loss term that makes them",
   "upload_type": "software",
-  "description": "Evaluation protocol, premise audit, training-loss wrappers (including the wall-band phase-indicator term) and per-run measurements for the paper. Trained checkpoints are deposited separately: [checkpoint DOI].",
-  "creators": [{"name": "[Family name, Given name]", "affiliation": "[Institution]"}],
+  "description": "Evaluation protocol, premise audit, training-loss wrappers (including the wall-band phase-indicator term) and per-run measurements for the paper. Trained checkpoints are deposited separately: doi:10.5281/zenodo.23299635.",
+  "creators": [
+    {
+      "name": "Do, Hai",
+      "affiliation": "VinUniversity, College of Engineering & Computer Science",
+      "orcid": "0009-0000-8633-1617"
+    }
+  ],
   "license": "MIT",
-  "keywords": ["pool boiling", "nucleation", "neural operators", "signed distance function", "BubbleML", "Bubbleformer"],
+  "keywords": [
+    "pool boiling",
+    "nucleation",
+    "neural operators",
+    "signed distance function",
+    "BubbleML",
+    "Bubbleformer"
+  ],
   "related_identifiers": [
-    {"identifier": "10.57967/hf/5594", "relation": "references", "scheme": "doi"},
-    {"identifier": "[paper DOI]", "relation": "isSupplementTo", "scheme": "doi"}
+    {
+      "identifier": "10.57967/hf/5594",
+      "relation": "references",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.23299635",
+      "relation": "isSupplementedBy",
+      "scheme": "doi"
+    }
   ]
 }

@@ -1,7 +1,7 @@
 # Learned pool-boiling forecasters and nucleation
 
 Code and results for the paper *"Why learned pool-boiling forecasters do not nucleate, and a loss term
-that makes them"* ([authors], [journal / DOI on publication]).
+that makes them"* (Hai Do; journal and DOI to be added on publication).
 
 The repository contains:
 - the evaluation protocol (nucleation events matched to the reference simulation, one step ahead and in
@@ -67,14 +67,14 @@ See [REPRODUCE.md](REPRODUCE.md), which covers:
 ## Licence
 
 - Code: MIT (see `LICENSE`).
-- Trained checkpoints (on Zenodo): CC BY-NC-SA 4.0, matching the licence of the training data.
+- Trained checkpoints (on Zenodo, doi:10.5281/zenodo.23299635): CC BY-NC-SA 4.0, matching the licence of the training data.
 - Upstream Bubbleformer: MIT. It is not included here and is fetched by `setup/get_bubbleformer.sh`.
 - BubbleML data: CC BY-NC-SA 4.0. The repository includes derived measurements only, plus two frames
   used in Fig. 5a (`results/diagnostics/fig5a_frames.npz`).
 
 ## Trained models
 
-The 24 trained models are on Zenodo under CC BY-NC-SA 4.0: [Zenodo DOI]. They contain weights and training configuration
+The 24 trained models are on Zenodo under CC BY-NC-SA 4.0: [doi:10.5281/zenodo.23299635](https://doi.org/10.5281/zenodo.23299635). They contain weights and training configuration
 only (`scripts/export_checkpoints.py`), and `manifest.csv` lists each file with its SHA-256. Place
 them under `$WORK_ROOT/checkpoints/` and evaluate any of them with
 `bin/evaluate_run.sh <run> $WORK_ROOT/checkpoints/run<run>.ckpt`.

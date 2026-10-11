@@ -25,7 +25,7 @@ variables locate the large files:
 - **Not included:**
   - **The BubbleML data**, about 336 GB for pool boiling and 78 GB for the two single-bubble studies.
     Download it with `scripts/pull_study.py`.
-  - **The 24 trained checkpoints.** They are on Zenodo ([Zenodo DOI], about 14 GB, weights and training
+  - **The 24 trained checkpoints.** They are on Zenodo ([doi:10.5281/zenodo.23299635](https://doi.org/10.5281/zenodo.23299635), about 14 GB, weights and training
     configuration only, with SHA-256 sums in `manifest.csv`). Retraining them is level C.
   - **The saved predictions**, about 1.8 GB per run and mode, which the CPU analyses read. They are
     regenerated from the checkpoints by `bin/evaluate_run.sh`.
