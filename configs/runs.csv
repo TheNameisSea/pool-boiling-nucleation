@@ -1,0 +1,25 @@
+run,paper_label,architecture,model_cfg,data_cfg,seed,optimiser_override,train_entry,loss_env
+735,baseline,AViT,avit_small,poolboiling_fc72_nocond,42,,,
+766,baseline,AViT,avit_small,poolboiling_fc72_nocond,1,,,
+773,baseline,AViT,avit_small,poolboiling_fc72_nocond,2,,,
+716,thermophysical conditioning (baseline),FiLM-AViT,film_avit_small,poolboiling_fc72,42,,,
+813,thermophysical conditioning (baseline),FiLM-AViT,film_avit_small,poolboiling_fc72,1,,,
+814,thermophysical conditioning (baseline),FiLM-AViT,film_avit_small,poolboiling_fc72,2,,,
+739,baseline,U-Net,unet_modern,poolboiling_fc72_nocond,42,optim_cfg=adamw optim_cfg.params.lr=1e-4,,
+855,baseline,U-Net,unet_modern,poolboiling_fc72_nocond,1,optim_cfg=adamw optim_cfg.params.lr=1e-4,,
+778,single-bubble control,AViT,avit_small,singlebubble_nocond,42,,,
+942,timing-tolerant loss,AViT,avit_small,poolboiling_fc72_nocond,42,,src/train_tolerant.py,TOL_SHIFT=1 TOL_BAND_ROWS=16 TOL_TILE=16
+974,first output frame only,AViT,avit_small,poolboiling_fc72_nocond,42,,src/train_firstframe.py,
+952,wall-band upweighting x10,AViT,avit_small,poolboiling_fc72_nocond,42,,src/train_bandweight.py,BAND_WEIGHT=10 BAND_ROWS=16
+980,wall-band upweighting x10,AViT,avit_small,poolboiling_fc72_nocond,1,,src/train_bandweight.py,BAND_WEIGHT=10 BAND_ROWS=16
+1011,wall-band upweighting x30,AViT,avit_small,poolboiling_fc72_nocond,42,,src/train_bandweight.py,BAND_WEIGHT=30 BAND_ROWS=16
+1034,wall-band upweighting x10,U-Net,unet_modern,poolboiling_fc72_nocond,42,optim_cfg=adamw optim_cfg.params.lr=1e-4,src/train_bandweight.py,BAND_WEIGHT=10 BAND_ROWS=16
+1052,local wall path + upweighting,AViT,avit_small,poolboiling_fc72_nocond,42,,src/train_wallpath.py,BAND_WEIGHT=10
+1089,phase-indicator term,AViT,avit_small,poolboiling_fc72_nocond,42,,src/train_indicator.py,BAND_WEIGHT=1 IND_WEIGHT=1
+1184,phase-indicator term,AViT,avit_small,poolboiling_fc72_nocond,1,,src/train_indicator.py,BAND_WEIGHT=1 IND_WEIGHT=1
+1055,phase-indicator + upweighting,AViT,avit_small,poolboiling_fc72_nocond,42,,src/train_indicator.py,BAND_WEIGHT=10 IND_WEIGHT=1
+1077,phase-indicator + upweighting,AViT,avit_small,poolboiling_fc72_nocond,1,,src/train_indicator.py,BAND_WEIGHT=10 IND_WEIGHT=1
+1181,phase-indicator term,U-Net,unet_modern,poolboiling_fc72_nocond,42,optim_cfg=adamw optim_cfg.params.lr=1e-4,src/train_indicator.py,BAND_WEIGHT=1 IND_WEIGHT=1
+1070,phase-indicator + upweighting,U-Net,unet_modern,poolboiling_fc72_nocond,42,optim_cfg=adamw optim_cfg.params.lr=1e-4,src/train_indicator.py,BAND_WEIGHT=10 IND_WEIGHT=1
+1200,phase-indicator over the whole domain,AViT,avit_small,poolboiling_fc72_nocond,42,,src/train_indicator.py,BAND_WEIGHT=1 BAND_ROWS=512 IND_WEIGHT=32
+1194,phase-indicator + pushforward,AViT,avit_small,poolboiling_fc72_nocond,42,,src/train_pushforward.py,BAND_WEIGHT=1 IND_WEIGHT=1 PF_EVERY=2

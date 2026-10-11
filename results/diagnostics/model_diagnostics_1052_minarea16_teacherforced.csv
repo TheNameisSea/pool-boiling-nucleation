@@ -1,0 +1,7 @@
+model,job,twall,n_sites,min_area,tf_first_pred,tf_first_ref,tf_first_ratio,tf_win_pred_rate,tf_win_ref_rate,tf_win_ratio,tf_first_pred_onsite,tf_first_ref_onsite,tf_first_ratio_onsite,tf_win_ratio_onsite,tf_onestep_rel_l2_dfun
+avit_small_wallpath_bw10,1052,75,5,16,0,30,0,0.002,0.100667,0.0198675,0,30,0,0.0198675,0.149574
+avit_small_wallpath_bw10,1052,82,12,16,19,184,0.103261,0.0873333,0.617333,0.141469,19,184,0.103261,0.12743,0.0138453
+avit_small_wallpath_bw10,1052,90,20,16,16,244,0.0655738,0.096,0.816,0.117647,16,244,0.0655738,0.111111,0.0127553
+avit_small_wallpath_bw10,1052,96,26,16,24,307,0.0781759,0.138,1.01933,0.135383,24,307,0.0781759,0.134075,0.0153204
+avit_small_wallpath_bw10,1052,102,32,16,24,362,0.0662983,0.148,1.20933,0.122381,24,362,0.0662983,0.121279,0.0139003
+avit_small_wallpath_bw10,1052,107,37,16,10,340,0.0294118,0.116667,1.12733,0.103489,10,340,0.0294118,0.0999409,0.0155541

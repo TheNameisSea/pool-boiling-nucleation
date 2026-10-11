@@ -1,0 +1,7 @@
+model,job,twall,n_sites,min_area,tf_first_pred,tf_first_ref,tf_first_ratio,tf_win_pred_rate,tf_win_ref_rate,tf_win_ratio,tf_first_pred_onsite,tf_first_ref_onsite,tf_first_ratio_onsite,tf_win_ratio_onsite,tf_onestep_rel_l2_dfun
+film_avit_small_cond_s2,814,75,5,16,545,30,18.1667,0.364667,0.100667,3.62252,9,30,0.3,0.0662252,0.144648
+film_avit_small_cond_s2,814,82,12,16,18,184,0.0978261,0.0393333,0.617333,0.0637149,9,184,0.048913,0.049676,0.0143908
+film_avit_small_cond_s2,814,90,20,16,20,244,0.0819672,0.058,0.816,0.0710784,16,244,0.0655738,0.0620915,0.0132904
+film_avit_small_cond_s2,814,96,26,16,4,307,0.0130293,0.066,1.01933,0.0647482,4,307,0.0130293,0.0621321,0.0157165
+film_avit_small_cond_s2,814,102,32,16,6,362,0.0165746,0.06,1.20933,0.0496141,6,362,0.0165746,0.0496141,0.0142957
+film_avit_small_cond_s2,814,107,37,16,5,340,0.0147059,0.0626667,1.12733,0.0555884,5,340,0.0147059,0.054997,0.0158382

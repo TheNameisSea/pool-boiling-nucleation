@@ -1,0 +1,7 @@
+model,job,twall,n_sites,min_area,tf_first_pred,tf_first_ref,tf_first_ratio,tf_win_pred_rate,tf_win_ref_rate,tf_win_ratio,tf_first_pred_onsite,tf_first_ref_onsite,tf_first_ratio_onsite,tf_win_ratio_onsite,tf_onestep_rel_l2_dfun
+avit_small_singlebubble_control,778,90,1,16,2,4,0.5,0.00733333,0.0133333,0.55,2,4,0.5,0.55,0.00970979
+avit_small_singlebubble_control,778,92,1,16,4,4,1,0.0133333,0.0133333,1,4,4,1,1,0.00967259
+avit_small_singlebubble_control,778,94,1,16,3,4,0.75,0.00866667,0.0133333,0.65,3,4,0.75,0.65,0.00959723
+avit_small_singlebubble_control,778,96,1,16,3,4,0.75,0.01,0.0133333,0.75,3,4,0.75,0.75,0.0101282
+avit_small_singlebubble_control,778,98,1,16,4,5,0.8,0.0106667,0.0166667,0.64,4,5,0.8,0.64,0.0100984
+avit_small_singlebubble_control,778,100,1,16,4,5,0.8,0.014,0.0166667,0.84,4,5,0.8,0.84,0.0115056

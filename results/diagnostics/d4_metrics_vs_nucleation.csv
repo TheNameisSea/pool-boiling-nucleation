@@ -1,0 +1,23 @@
+job,group,arch,val_loss,val_loss_last5,recall,precision,onestep_rel_l2_dfun,rollout_ratio,rollout_eikonal_err,rollout_rel_l2_dfun,interface_width
+735,baseline (incl. thermophysical conditioning),axial transformer,0.3469,0.3405,0.0104,0.3846,0.0122,0.0452,0.1481,0.6634,0.9245
+766,baseline (incl. thermophysical conditioning),axial transformer,0.3593,0.352,0.0021,0.1364,0.013,0.0363,0.0224,0.5815,0.9922
+773,baseline (incl. thermophysical conditioning),axial transformer,0.3376,0.342,0.0139,0.625,0.0122,0.0212,0.0365,0.6954,0.9481
+716,baseline (incl. thermophysical conditioning),axial transformer,0.386,0.3761,0.0042,0.1364,0.0149,0.0508,0.0243,0.5873,1.0299
+813,baseline (incl. thermophysical conditioning),axial transformer,0.3752,0.3673,0.0195,0.3373,0.0148,0.0349,0.0437,0.5958,0.9626
+814,baseline (incl. thermophysical conditioning),axial transformer,0.3593,0.3645,0.0104,0.375,0.0147,0.0485,0.0212,0.607,1.0036
+739,baseline (incl. thermophysical conditioning),U-Net,0.3909,0.3821,0.0125,0.0744,0.0205,0.0006,0.0554,0.8146,1.0395
+855,baseline (incl. thermophysical conditioning),U-Net,0.387,0.3774,0.0056,0.1176,0.0207,0.0,0.0075,0.9448,1.053
+942,other loss / architecture changes,axial transformer,0.3509,0.3438,0.0299,0.4886,0.0127,0.0447,0.0482,0.6813,0.9687
+1052,other loss / architecture changes,axial transformer,0.3726,0.366,0.0578,0.8925,0.0143,0.1003,0.1025,0.6167,0.9721
+952,wall-band L2 upweighting,axial transformer,0.3501,0.3389,0.1691,0.9382,0.0126,0.3174,0.025,0.5459,1.0212
+980,wall-band L2 upweighting,axial transformer,0.3468,0.3378,0.0967,0.9521,0.0118,0.082,0.0431,0.579,1.0081
+1011,wall-band L2 upweighting,axial transformer,0.3462,0.3375,0.2234,0.9224,0.0128,0.1982,0.0211,0.6483,1.0271
+1034,wall-band L2 upweighting,U-Net,0.3757,0.3667,0.0035,0.122,0.0194,0.0024,0.0253,0.7753,1.0542
+1055,phase-indicator term (all variants),axial transformer,0.3586,0.3489,0.849,0.9187,0.014,0.3545,0.0396,0.592,0.8165
+1077,phase-indicator term (all variants),axial transformer,0.3524,0.3447,0.8636,0.9247,0.0146,0.2474,0.0618,0.6354,0.8218
+1089,phase-indicator term (all variants),axial transformer,0.3572,0.3481,0.8392,0.922,0.0154,0.2681,0.0444,0.6032,0.8792
+1184,phase-indicator term (all variants),axial transformer,0.3587,0.3476,0.8406,0.9264,0.0155,0.3542,0.0438,0.6072,0.8578
+1200,phase-indicator term (all variants),axial transformer,0.3799,0.3692,0.7035,0.8799,0.0313,0.1752,0.2029,0.6945,0.1486
+1194,phase-indicator term (all variants),axial transformer,0.4036,0.3941,0.6388,0.8338,0.0181,0.3071,0.0262,0.6307,1.106
+1070,phase-indicator term (all variants),U-Net,0.3898,0.3797,0.6214,0.867,0.0212,0.1039,0.0151,0.6446,0.8566
+1181,phase-indicator term (all variants),U-Net,0.388,0.3784,0.6771,0.8758,0.0211,0.1209,0.0618,0.6291,0.8753
