@@ -1,6 +1,6 @@
 # Learned pool-boiling forecasters and nucleation
 
-Code and results for the paper *"Missing nucleation in learned pool-boiling forecasters: a squared-error cause and a phase-indicator remedy"* (Hai Do; journal and DOI to be added on publication).
+Code and results for the paper *"Missing nucleation in learned pool-boiling forecasters: a squared-error cause and a phase-indicator remedy"* (Chi Hai Do; journal and DOI to be added on publication).
 
 The repository contains:
 - the evaluation protocol (nucleation events matched to the reference simulation, one step ahead and in
