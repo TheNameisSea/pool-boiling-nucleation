@@ -5,7 +5,8 @@ Adds a binary cross-entropy on the phase indicator implied by the SDF, in the wa
     s = sigmoid(phi_pred / eps),   y = 1[phi_tgt > 0],   rows < band_rows of the SDF channel
     loss = WallBandWeightedLoss(pred, tgt) + ind_weight * mean_{b,t} mean_band BCE(s, y)
 
-band_weight = 1 gives the plain relative-L2 term plus the indicator term (the paper's main setting).
+The defaults (band_weight = 1, ind_weight = 1) are Eq. 3 of the paper: the plain relative-L2 term plus the
+indicator term. band_weight > 1 adds wall-band upweighting (the "+ upweighting" runs, e.g. 1055: 10).
 eps is one cell (1/32 domain units; the configs use `normalize: none`, so predictions are in physical
 units). The BCE is computed on logits for numerical stability.
 """
@@ -17,7 +18,7 @@ from wall_band_loss import WallBandWeightedLoss
 
 
 class IndicatorBandLoss(nn.Module):
-    def __init__(self, band_weight: float = 10.0, band_rows: int = 16, ind_weight: float = 1.0,
+    def __init__(self, band_weight: float = 1.0, band_rows: int = 16, ind_weight: float = 1.0,
                  eps: float = 1.0 / 32, sdf_channel: int = 0):
         super().__init__()
         self.base = WallBandWeightedLoss(weight=band_weight, band_rows=band_rows, sdf_channel=sdf_channel)
@@ -39,6 +40,11 @@ if __name__ == "__main__":
     a = IndicatorBandLoss(band_weight=10, band_rows=8, ind_weight=0)(p, t).item()
     b = WallBandWeightedLoss(weight=10, band_rows=8)(p, t).item()
     print(f"ind_weight=0 reproduces the wall-band-weighted loss: {a:.6f} vs {b:.6f}"); assert abs(a - b) < 1e-6
+    # the defaults are Eq. 3: unweighted relative L2 (LpLoss, see wall_band_loss.py) plus the indicator at weight 1
+    d = IndicatorBandLoss(band_rows=8)
+    assert d.base.weight == 1 and d.ind_weight == 1
+    assert abs(d(p, t).item() - (WallBandWeightedLoss(weight=1, band_rows=8)(p, t) + d.indicator(p, t)).item()) < 1e-6
+    print("defaults = Eq. 3 (band_weight 1, ind_weight 1)")
     # check: with an uncertain target (probability p of vapour), the indicator term's optimum has phi > 0 iff p > 0.5
     L = IndicatorBandLoss(band_weight=1, band_rows=8, ind_weight=1)
     seed, noseed = torch.full((1, 1, 4, 8, 8), 0.06), torch.full((1, 1, 4, 8, 8), -0.5)

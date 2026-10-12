@@ -5,7 +5,7 @@ Replaces the TRAINING criterion only, then runs upstream `scripts/train.py` as _
 keeps upstream LpLoss.
 
 Configured by environment variables (Hydra rejects unknown keys):
-    BAND_WEIGHT   multiplier on the SDF wall band's squared error   (default 10; the paper's fix uses 1)
+    BAND_WEIGHT   multiplier on the SDF wall band's squared error   (default 1 = Eq. 3; 10 for the "+ upweighting" runs)
     BAND_ROWS     wall-band height in cells                          (default 16; 512 = whole domain)
     IND_WEIGHT    weight of the indicator BCE term                   (default 1)
     IND_EPS       sigmoid width, in domain units                     (default 1/32 = one cell)
@@ -22,7 +22,7 @@ sys.path.insert(0, HERE)
 import bubbleformer.modules as M  # noqa: E402
 from indicator_loss import IndicatorBandLoss  # noqa: E402
 
-CFG = dict(band_weight=float(os.getenv("BAND_WEIGHT", "10")), band_rows=int(os.getenv("BAND_ROWS", "16")),
+CFG = dict(band_weight=float(os.getenv("BAND_WEIGHT", "1")), band_rows=int(os.getenv("BAND_ROWS", "16")),
            ind_weight=float(os.getenv("IND_WEIGHT", "1")), eps=float(os.getenv("IND_EPS", str(1 / 32))))
 print(f"INDICATOR_BAND_LOSS: {CFG}  (training only; validation keeps upstream LpLoss)", flush=True)
 
